@@ -1,0 +1,107 @@
+@import './variables';
+@import './normalize';
+
+@import './components/all';
+
+body {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   background: $bg;
+   color: $white;
+   background-image: url('../assets/bg-texture.png');
+}
+
+/* General Styles */
+
+.container {
+   max-width: $container-width-lg;
+   margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+   font-weight: 500;
+}
+
+h1 {
+   font-size: 40px;
+   line-height: 80px;
+}
+
+section {
+   margin-top: 120px;
+
+   h2, h4 {
+      text-align: center;
+      color: $light;
+   }
+
+   h2 {
+      color: $primary;
+      margin-bottom: 40px;
+   }
+}
+
+.text-light {
+   color: $light;
+}
+
+a {
+   color: $primary;
+   transition: $transition;
+
+   &:hover {
+      color: $white;
+   }
+}
+
+.btn {
+   width: max-content;
+   display: inline-block;
+   color: $primary;
+   padding: 10px 20px;
+   border: 1px solid $primary;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: $transition;
+
+   &:hover {
+      background-color: $white;
+      color: $bg;
+      border-color: transparent;
+   }
+}
+
+.btn-primary {
+   background-color: $primary;
+   color: $bg;
+}
+
+img {
+   display: block;
+   width: 100%;
+   object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+   .container {
+      max-width: $container-width-md;
+   }
+
+   section {
+      margin-top: 50px;
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      max-width: $container-width-ms;
+   }
+
+   section {
+      h2 {
+         margin-bottom: 20px;
+      }
+   }
+}

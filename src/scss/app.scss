@@ -7,6 +7,7 @@ body {
    font-family: 'Poppins', sans-serif;
    font-weight: 400;
    font-size: 16px;
+   -webkit-text-size-adjust: none;
    line-height: 24px;
    background: $bg;
    color: $white;
@@ -31,6 +32,7 @@ h1 {
 
 section {
    margin-top: 120px;
+   // height: 100vh;
 
    h2, h4 {
       text-align: center;
@@ -96,7 +98,12 @@ img {
 
 @media (max-width: 480px) {
    .container {
-      max-width: $container-width-ms;
+      max-width: $container-width-sm;
+   }
+
+   h1 {
+      font-size: 32px;
+      line-height: 64px;
    }
 
    section {

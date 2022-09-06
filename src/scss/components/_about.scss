@@ -1,0 +1,124 @@
+.about__container {
+   display: grid;
+   grid-template-columns: 35% 60%;
+   gap: 5%;
+}
+
+.about__me {
+   display: grid;
+   place-items: center;
+   width: 100%;
+   aspect-ratio: 1/1;
+   border-radius: 30px;
+   background: linear-gradient(45deg, transparent, $primary, transparent);
+
+   &-image {
+      border-radius: 30px;
+      overflow: hidden;
+      transform: rotate(10deg);
+      transition: $transition;
+
+      &:hover {
+         transform: rotate(0);
+      }
+   }
+}
+
+.about__cards {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+}
+
+.about__card {
+   background: $bg-var;
+   border: 1px solid transparent;
+   border-radius: 15px;
+   padding: 35px 10px;
+   text-align: center;
+   transition: $transition;
+
+   &:hover {
+      background: transparent;
+      border-color: $primary-var;
+      cursor: default;
+   }
+
+   &:first-child {
+      padding: 5px;
+      cursor: pointer;
+   }
+
+   small {
+      color: $light;
+   }
+}
+
+.about__icon {
+   color: $primary;
+   font-size: 22px;
+   margin-bottom: 5px;
+}
+
+.about__content {
+   p {
+      margin: 30px 0;
+      color: $light;
+   }
+}
+
+.about__certificate {
+   border-radius: 15px;
+   overflow: hidden;
+   transition: $transition;
+
+   &:hover {
+      transform: scale(4.0);
+   }
+}
+
+@media (max-width: 1024px) {
+   .about__container {
+      grid-template-columns: 1fr;
+      gap: 0;
+   }
+
+   .about__me {
+      width: 50%;
+      margin: 30px auto 60px;
+   }
+
+   .about__content {
+      p {
+         margin: 15px 0;
+      }
+   }
+
+   .about__certificate {
+      &:hover {
+         transform: translate(350px,0) scale(3.0);
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .about__me {
+      width: 65%;
+      margin: 20px auto 50px;
+   }
+
+   .about__cards {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+   }
+
+   .about__content {
+      text-align: center;
+   }
+
+   .about__certificate {
+      &:hover {
+         transform: translate(100px,0) scale(2.0);
+      }
+   }
+}
